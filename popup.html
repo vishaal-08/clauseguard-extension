@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ClauseGuard Dashboard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="popup-container">
+    <header>
+      <div>
+        <p class="eyebrow">🛡️ CLAUSEGUARD</p>
+        <h1>Consent Risk Check</h1>
+      </div>
+      <span id="risk-badge" class="risk-badge">--</span>
+    </header>
+
+    <p id="status-message" class="status-message">
+      Open a webpage to start an analysis.
+    </p>
+
+    <section id="risk-list" class="risk-list"></section>
+    <button id="copy-report">Copy consent report</button>
+    <p id="copy-message" class="copy-message"></p>
+
+    <footer>
+      Informational guidance only. Not legal advice.
+    </footer>
+  </main>
+
+  <script src="popup.js"></script>
+</body>
+</html>

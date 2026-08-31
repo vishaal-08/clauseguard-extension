@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CloudNote — Create Account</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      color: #e2e8f0;
+      background: linear-gradient(135deg, #0f172a, #1e3a5f);
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      width: min(720px, 100%);
+      padding: 36px;
+      border: 1px solid #334155;
+      border-radius: 20px;
+      background: #ffffff;
+      color: #1e293b;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand {
+      margin: 0;
+      color: #2563eb;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin: 12px 0 8px;
+      font-size: 30px;
+    }
+
+    .subtitle {
+      margin-top: 0;
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    .terms-box {
+      max-height: 200px;
+      overflow-y: auto;
+      margin: 24px 0;
+      padding: 18px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      background: #f8fafc;
+      color: #475569;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .agreement {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 22px 0;
+      color: #334155;
+      line-height: 1.5;
+      cursor: pointer;
+    }
+
+    .agreement input {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      cursor: pointer;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border: 0;
+      border-radius: 9px;
+      color: white;
+      background: #2563eb;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    #message {
+      margin: 16px 0 0;
+      color: #15803d;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <p class="brand">CLOUDNOTE</p>
+    <h1>Create your workspace</h1>
+    <p class="subtitle">
+      Store, organise, and share your important notes securely.
+    </p>
+
+    <section class="terms-box">
+      <strong>Terms of Service</strong>
+
+      <p>
+        By uploading content, you grant CloudNote a perpetual,
+        worldwide license to host, reproduce, modify, and distribute
+        that content for service improvement and promotional purposes.
+      </p>
+
+      <p>
+        We may share your data with third-party partners to provide
+        analytics, advertising, and personalised services.
+      </p>
+
+      <p>
+        Paid plans include automatic renewal unless cancelled before
+        the renewal date.
+      </p>
+
+      <p>
+        Any dispute must be resolved through binding arbitration.
+      </p>
+    </section>
+
+    <label class="agreement">
+      <input type="checkbox" id="agree">
+      <span>I agree to the Terms of Service and Privacy Policy.</span>
+    </label>
+
+    <button id="create-account">Create my workspace</button>
+
+    <p id="message"></p>
+  </main>
+
+  <script>
+    document.getElementById("create-account").addEventListener("click", () => {
+      const agreed = document.getElementById("agree").checked;
+      const message = document.getElementById("message");
+
+      if (!agreed) {
+        message.style.color = "#dc2626";
+        message.textContent = "Please review and accept the Terms first.";
+        return;
+      }
+
+      message.style.color = "#15803d";
+      message.textContent = "Workspace created successfully!";
+    });
+  </script>
+</body>
+</html>

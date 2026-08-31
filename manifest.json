@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "ClauseGuard",
+  "version": "1.0.0",
+  "description": "Warns users about potential risks in digital agreements.",
+  "permissions": ["activeTab", "storage", "clipboardWrite"],
+  "host_permissions": ["http://localhost:3000/*"],
+  "action": {
+    "default_title": "ClauseGuard",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

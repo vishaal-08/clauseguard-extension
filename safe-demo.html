@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CloudNote — Safe Agreement</title>
+
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: Arial, sans-serif;
+      background: #eff6ff;
+    }
+
+    .card {
+      width: min(680px, 100%);
+      padding: 36px;
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 20px 50px rgba(30, 64, 175, 0.15);
+    }
+
+    h1 {
+      margin-top: 0;
+      color: #1e3a8a;
+    }
+
+    .terms-box {
+      margin: 24px 0;
+      padding: 18px;
+      border-radius: 10px;
+      background: #f8fafc;
+      color: #334155;
+      line-height: 1.65;
+    }
+
+    label {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: #334155;
+      cursor: pointer;
+    }
+
+    input {
+      width: 18px;
+      height: 18px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 24px;
+      padding: 14px;
+      border: 0;
+      border-radius: 9px;
+      color: white;
+      background: #2563eb;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    #message {
+      color: #15803d;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="card">
+    <h1>CloudNote Basic Terms</h1>
+
+    <section class="terms-box">
+      <p>
+        CloudNote stores your notes only to provide the service you requested.
+      </p>
+
+      <p>
+        You retain ownership of content you upload. We do not sell your
+        personal information.
+      </p>
+
+      <p>
+        You can delete your account and its associated content from your
+        account settings.
+      </p>
+    </section>
+
+    <label>
+      <input type="checkbox" id="agree">
+      I agree to the Terms of Service.
+    </label>
+
+    <button id="continue">Continue</button>
+    <p id="message"></p>
+  </main>
+
+  <script>
+    document.getElementById("continue").addEventListener("click", () => {
+      const agreed = document.getElementById("agree").checked;
+
+      document.getElementById("message").textContent = agreed
+        ? "You can continue safely."
+        : "Please accept the terms first.";
+    });
+  </script>
+</body>
+</html>

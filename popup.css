@@ -1,0 +1,138 @@
+body {
+  width: 360px;
+  margin: 0;
+  color: #e2e8f0;
+  background: #0f172a;
+  font-family: Arial, sans-serif;
+}
+
+.popup-container {
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 16px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #fbbf24;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.risk-badge {
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: white;
+  background: #334155;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.risk-badge.high {
+  background: #b91c1c;
+}
+
+.risk-badge.medium {
+  background: #b45309;
+}
+
+.risk-badge.low {
+  background: #15803d;
+}
+
+.status-message {
+  color: #94a3b8;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.risk-list {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.risk-card {
+  padding: 12px;
+  border-radius: 10px;
+  background: #1e293b;
+}
+
+.risk-card.high {
+  border-left: 4px solid #ef4444;
+}
+
+.risk-card.medium {
+  border-left: 4px solid #f59e0b;
+}
+
+.risk-card p {
+  margin: 7px 0 0;
+  color: #e2e8f0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.risk-label {
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.risk-label.high {
+  color: #fca5a5;
+}
+
+.risk-label.medium {
+  color: #fcd34d;
+}
+
+footer {
+  border-top: 1px solid #334155;
+  padding-top: 14px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+#copy-report {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 11px;
+  border: 0;
+  border-radius: 8px;
+  color: #111827;
+  background: #fbbf24;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#copy-report:hover {
+  background: #f59e0b;
+}
+
+#copy-report:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.copy-message {
+  min-height: 16px;
+  margin: 0 0 16px;
+  color: #86efac;
+  font-size: 12px;
+  text-align: center;
+}
